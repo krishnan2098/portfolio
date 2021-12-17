@@ -37,13 +37,25 @@
 
 .menu-bars {
     flex: 1;
-    background: black;
+    /* background: black; */
     color: #768089;
     display: flex;
     padding: 16px 0;
     font-size: 30px;
     justify-content: start;
-    border-radius: 4px;
+    transition: 700ms;
+}
+
+.logo {
+    flex: 1;
+    /* background: black; */
+    opacity: 0.9;
+    height: 40px;
+    color: #768089;
+    display: flex;
+    padding: 16px 0;
+    font-size: 30px;
+    justify-content: center;
     transition: 700ms;
 }
 

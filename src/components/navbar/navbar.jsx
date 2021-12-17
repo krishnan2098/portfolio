@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as MdIcons from 'react-icons/md'
-import './navbar.css'
 import { NavbarMenuData } from './navbar-menu-data';
+import './navbar.css'
+import Logo from '../../logo-vector.png';
 
 const Navbar = () => {
     const [navmenu, setNavmenu] = useState(false)
@@ -19,6 +20,12 @@ const Navbar = () => {
                         <div className="menu-bars">
                             <FaIcons.FaBars onClick={showNavmenu}/>
                         </div>
+                        <div className="logo">
+                            <img src={Logo} alt="" />
+                        </div>
+                        {/* <div className="logo">
+                            <img src="/public/logo192" alt="" />
+                        </div> */}
                         <div className="dark-mode-icon">
                             <MdIcons.MdDarkMode className='icon' size={25}/>
                             {/* <MdIcons.MdOutlineWbSunny className='icon' size={25}/> */}
