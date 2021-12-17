@@ -12,34 +12,13 @@ const App = () => {
       <Router>
         <Navbar/>
         <Routes>
-          <Route path='/'></Route>
+          <Route path='/' element={<Intro />} />
+          <Route path='/blog' element={<Blog />} />
+          <Route path='/projects' element={<Projects />} />
+          {/* <Route path='/contact' element={<Contact />} /> */}
         </Routes>
+        <Footer/>
       </Router>
-      <div className='app-wrapper'>
-        {/* <div className='app-row' style={{ backgroundColor: "black"}}>
-          <div className='app-col'>
-            <Intro/>
-          </div>
-        </div> */}
-        {/* <div className='app-row'>
-          <div className='app-col'>
-            <Navbar/>
-          </div>
-        </div> */}
-        <div className='app-row'>
-          <div className='app-col'>
-            <Projects/>
-            <Footer/>
-          </div>
-        </div>
-        <div className='app-row'>
-          <div className='app-col a-blog'>
-            <Blog/>
-            <Footer/>
-          </div>
-        </div>
-      </div>
-      {/* <Footer/> */}
     </div>
     );
 }

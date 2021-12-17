@@ -14,8 +14,8 @@ const Footer = () => {
                 </div>
                 <div className="f-row list map">
                     <div className="f-col"><a href='/'>Hello</a></div>
-                    <div className="f-col"><a href='#projects'>Projects</a></div>
-                    <div className="f-col"><a href='#blog'>Blog </a></div>
+                    <div className="f-col"><a href='/projects'>Projects</a></div>
+                    <div className="f-col"><a href='/blog'>Blog </a></div>
                 </div>
                 <div className="f-row list socials">
                     <div onMouseOver={() => setLnActive(true)} onMouseLeave={() => setLnActive(false)} className='social-icon f-col'><a className={lnactive ? 'active' : ''} href='https://www.linkedin.com/in/sankararaman-k/'><AiIcons.AiFillLinkedin size={25} /></a></div>

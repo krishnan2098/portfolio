@@ -16,22 +16,22 @@ const Navbar = () => {
             <div className='navbar'>
                 <div className="navbar-wrapper">
                     <div className="menu">
-                        <Link to="#" className="menu-bars">
+                        <div className="menu-bars">
                             <FaIcons.FaBars onClick={showNavmenu}/>
-                        </Link>
-                        <Link to="#" className="dark-mode-icon">
+                        </div>
+                        <div className="dark-mode-icon">
                             <MdIcons.MdDarkMode className='icon' size={25}/>
                             {/* <MdIcons.MdOutlineWbSunny className='icon' size={25}/> */}
-                        </Link>
+                        </div>
                     </div>
                 </div>
             </div>
             <nav className={navmenu ? 'nav-menu active' : 'nav-menu'}>
                 <ul className='nav-menu-list' onClick={showNavmenu}>
                     <li className="nav-menu-toggle">
-                        <Link to='#' className='menu-bars'>
+                        <div className='menu-bars'>
                             <AiIcons.AiOutlineClose/>
-                        </Link>
+                        </div>
                     </li>
                     { NavbarMenuData.map((item, index) => {
                         return (
