@@ -3,6 +3,7 @@ import Intro from './components/intro/intro'
 import Projects from './components/projects/projects'
 import Blog from './components/blog/blog'
 import Footer from './components/footer/footer'
+import Contact from './components/contact/contact'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
@@ -15,7 +16,7 @@ const App = () => {
           <Route path='/' element={<Intro />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/projects' element={<Projects />} />
-          {/* <Route path='/contact' element={<Contact />} /> */}
+          <Route path='/contact' element={<Contact />} />
         </Routes>
         <Footer/>
       </Router>
