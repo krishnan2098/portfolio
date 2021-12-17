@@ -6,25 +6,25 @@ import * as AiIcons from "react-icons/ai";
 export const NavbarMenuData = [
     {
         title: "Home",
-        path: "/",
+        path: "/portfolio/",
         icon: <AiIcons.AiFillHome/>,
         cName: "nav-menu-text"
     },
     {
         title: "Blog",
-        path: "/blog",
+        path: "/portfolio/blog",
         icon: <FaIcons.FaMicroblog/>,
         cName: "nav-menu-text"
     },
     {
         title: "Projects",
-        path: "/projects",
+        path: "/portfolio/projects",
         icon: <AiIcons.AiFillProject/>,
         cName: "nav-menu-text"
     },
     {
         title: "Contact",
-        path: "/contact",
+        path: "/portfolio/contact",
         icon: <AiIcons.AiTwotoneMail/>,
         cName: "nav-menu-text"
     }
