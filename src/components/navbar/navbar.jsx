@@ -23,9 +23,6 @@ const Navbar = () => {
                         <div className="logo">
                             <img src={Logo} alt="" />
                         </div>
-                        {/* <div className="logo">
-                            <img src="/public/logo192" alt="" />
-                        </div> */}
                         <div className="dark-mode-icon">
                             <MdIcons.MdDarkMode className='icon' size={25}/>
                             {/* <MdIcons.MdOutlineWbSunny className='icon' size={25}/> */}
