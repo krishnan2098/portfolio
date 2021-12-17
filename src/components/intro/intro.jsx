@@ -1,4 +1,4 @@
-import './intro.css'
+import './intro.css';
 
 const Intro = () => {
     return (
@@ -18,13 +18,12 @@ const Intro = () => {
                         <div className="i-title">
                             <h1 className="i-name">I am Shankar. My home is located in bash terminal of the Linux environment for the past 6 years. I speak python and Bash fluently.</h1>
                             <div className="i-title-item">Web Developer | DevOps Engineer </div>
-                            {/* <div className="i-title-item"></div> */}
                         </div>
                     </div>
                 </div>
             </div>
             <div className="i-right">
-                right
+                {/* right */}
             </div>
         </div>
     )
