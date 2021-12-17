@@ -53,13 +53,7 @@ footer{
     transition: 0.4s ease-in-out;
 }
 
-.map .f-col .link.active {
-    color: #FC6D6D;
-    border-bottom: 2px solid #FC6D6D;
-    transition: 0.4s ease-in-out;
-}
-
-.f-row.list .social-icon .active {
+.f-row.list .social-icon .link:hover {
     color: #FC6D6D;
     transition: 0.4s ease-in-out;
 }
