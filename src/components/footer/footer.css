@@ -37,7 +37,7 @@ footer{
     align-items: center;
 }
 
-.f-col a {
+.f-col .link {
     font-size: 16px;
     font-weight: 550;
     color: #bfc4cc;
@@ -47,7 +47,7 @@ footer{
     transition: 0.5s ease-in-out;
 }
 
-.map .f-col a:hover {
+.map .f-col .link:hover {
     color: #FC6D6D;
     border-bottom: 2px solid #FC6D6D;
     transition: 0.4s ease-in-out;
