@@ -3,7 +3,7 @@ import Intro from './components/intro/intro'
 import Projects from './components/projects/projects'
 import Blog from './components/blog/blog'
 import Footer from './components/footer/footer'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
 const App = () => {
