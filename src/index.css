@@ -1,3 +1,18 @@
+html {
+  --pageBackground: black;
+  --textColor: #bfc4cc;
+  --titleColor: #FC6D6D;
+  --highlightColor: #FC6D6D;
+  --navmenuBackground: #101010;
+  --navmenuHighlightColor: #303030;
+  --blogDividerColor: #0c0c0c;
+  --scrollBorderColor: #000;
+  --scrollThumbColor: #bfc4cc;
+  --galleryImgNumColor: #303030;
+  --galleryBorderColor: #202020;
+  --iconHover: #efefef;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

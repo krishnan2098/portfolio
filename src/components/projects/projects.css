@@ -29,7 +29,7 @@
 
 .p-col {
     flex: 1;
-    border: 1px solid #111213;
+    border: 1px solid var(--galleryBorderColor);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,8 @@
 }
 
 .p-col.img {
-    background: #25282b;
+    /* background: #202020; */
+    opacity: 0.9;
     overflow: hidden;
 }
 
@@ -46,7 +47,7 @@
     margin: 0 15px 15px 0;
     font-size: 60px;
     font-weight: 750;
-    color: #383c42;
+    color: var(--galleryImgNumColor);
 }
 
 .p-col img {
@@ -60,24 +61,24 @@
 }
 
 .p-right::-webkit-scrollbar-thumb {
-    background: #bfc4cc;
+    background: var(--scrollThumbColor);
     border-radius: 100vw;
 }​
 
 .p-right::-webkit-scrollbar-track {
-    background: #383c42;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    background: var(--galleryBorderColor);
+    border-left: 2px solid var(--scrollBorderColor);
+    border-right: 2px solid var(--scrollBorderColor);
 }
 
 .p-right::-webkit-scrollbar-track-piece {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    background: #383c42;
+    background: var(--galleryBorderColor);;
+    border-left: 2px solid var(--scrollBorderColor);
+    border-right: 2px solid var(--scrollBorderColor);
 }
 
 .p-txt-item {
-    color: #FC6D6D;
+    color: var(--highlightColor);
     font-size: 110px;
     font-weight: 750;
 }

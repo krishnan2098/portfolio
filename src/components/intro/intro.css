@@ -30,7 +30,7 @@
 }
 
 .i-dyn-txt .i-dyn-txt-item {
-    color: #FC6D6D;
+    color: var(--titleColor);
     font-size: 125px;
     font-weight: 750;
     position: relative;
@@ -55,8 +55,8 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: black;
-    border-left: 2px solid #FC6D6D;
+    background: var(--pageBackground);
+    border-left: 2px solid var(--highlightColor);
     animation: typing 4s steps(12) infinite;
 }
 

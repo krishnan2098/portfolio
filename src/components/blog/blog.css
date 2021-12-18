@@ -10,6 +10,10 @@
     background: blue;
 } */
 
+/* ::-webkit-scrollbar {
+  height: 0;
+} */
+
 .b-wrapper {
     display: flex;
     flex-direction: row;
@@ -23,7 +27,7 @@
     height: 80vh;
     overflow: hidden;
     object-fit: cover;
-    border-right: 1px solid white;
+    border-right: 1px solid var(--blogDividerColor);
 }
 
 .b-right {
@@ -34,7 +38,7 @@
     justify-content: center;
     height: 80vh;
     overflow: hidden;
-    border-left: 1px solid white;
+    border-left: 1px solid var(--blogDividerColor);
 }
 
 .b-row {
