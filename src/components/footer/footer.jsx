@@ -18,7 +18,7 @@ const Footer = () => {
                 <div className="f-row list socials">
                     <div className='social-icon f-col'><a href='https://www.linkedin.com/in/sankararaman-k/'><AiIcons.AiFillLinkedin className='link' size={25} /></a></div>
                     <div className='social-icon f-col'><a href='https://github.com/'><AiIcons.AiFillGithub className='link' size={25} /></a></div>
-                    <div className='social-icon f-col'><a href='https://www.linkedin.com/in/sankararaman-k/'><AiIcons.AiFillHome className='link' size={25} /></a></div>
+                    <div className='social-icon f-col'><a href='https://twitter.com/krishnan2098'><AiIcons.AiFillTwitterCircle className='link' size={25} /></a></div>
                 </div>
             </div>
         </footer>
