@@ -88,7 +88,7 @@
 }
 
 .post-date {
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .post-header {

@@ -20,6 +20,6 @@ a {
   color: var(--textColor);
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   height: 0;
-} */
+}
