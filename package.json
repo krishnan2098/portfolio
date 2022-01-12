@@ -1,5 +1,6 @@
 {
-  "name": "test",
+  "homepage": "https://krishnan2098.github.io/portfolio/",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,6 +17,9 @@
     "react-scripts": "5.0.0",
     "styled-components": "^5.3.3",
     "web-vitals": "^2.1.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   },
   "scripts": {
     "predeploy": "npm run build",
