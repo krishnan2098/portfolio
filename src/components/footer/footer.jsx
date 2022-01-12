@@ -1,54 +1,44 @@
-import { NavLink } from "react-router-dom";
-import "./footer.css";
-import * as AiIcons from "react-icons/ai";
+import { motion } from 'framer-motion';
+import { SocialsData } from './socialsData';
+import './footer.css';
 
-const Footer = () => {
+const Footer = (props) => {
+  const handleNavItemClick = (dir) => {
+    props.setPage(dir)
+  }
+
   return (
     <footer>
-      <div className="f-wrapper">
-        <div className="f-row">
-          <div className="f-col">
-            <span>Designed and Developed by Shankar</span>
+      <div className='f-wrapper'>
+        <div className='f-row'>
+          <div className='f-col'>
+            <span className='developed-by'>Designed and Developed by Shankar</span>
           </div>
         </div>
-        <div className="f-row list map">
-          <div className="f-col">
-            <NavLink className="link" to="/">
-              Hello
-            </NavLink>
-          </div>
-          <div className="f-col">
-            <NavLink className="link" to="/projects">
-              Projects
-            </NavLink>
-          </div>
-          <div className="f-col">
-            <NavLink className="link" to="/blog">
-              Blog
-            </NavLink>
-          </div>
-          <div className="f-col">
-            <NavLink className="link" to="/contact">
-              Contact
-            </NavLink>
-          </div>
+        <div className='f-row list'>
+          {props.pages.map(function (page, i) {
+            return (
+              <motion.div 
+              key={i} 
+              data-id={i} 
+              className='f-col' 
+              onClick={() => handleNavItemClick(i)}>
+                <span className={props.currentPageIndex === i ? 'nav-item-active' : 'nav-item'}>{page}</span>
+              </motion.div>
+            )
+          })}
         </div>
-        <div className="f-row list socials">
-          <div className="social-icon f-col">
-            <a href="https://www.linkedin.com/in/sankararaman-k/">
-              <AiIcons.AiFillLinkedin className="link" size={25} />
-            </a>
-          </div>
-          <div className="social-icon f-col">
-            <a href="https://github.com/">
-              <AiIcons.AiFillGithub className="link" size={25} />
-            </a>
-          </div>
-          <div className="social-icon f-col">
-            <a href="https://twitter.com/krishnan2098">
-              <AiIcons.AiFillTwitterCircle className="link" size={25} />
-            </a>
-          </div>
+        <div className='f-row list socials'>
+          {SocialsData.map((social, i) => (
+            <div key={i} className='social-icon f-col'>
+              <motion.a
+                whileHover={{ scale: 1.5, color: "#FC6D6D" }}
+                href={social.url}
+              >
+                {social.icon}
+              </motion.a>
+            </div>
+          ))}
         </div>
       </div>
     </footer>

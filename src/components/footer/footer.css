@@ -22,12 +22,8 @@ footer{
     flex-direction: row;
 }
 
-.f-row.list.map {
+.f-row.list {
     justify-content: center;
-}
-
-.f-row.list.socials {
-    justify-content: end;
 }
 
 .f-col {
@@ -36,26 +32,32 @@ footer{
     align-items: center;
 }
 
-.f-col .link {
-    font-size: 16px;
-    font-weight: 550;
-    padding: 5px 0;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: 0.5s ease-in-out;
+.developed-by {
+    font-size: 12px;
 }
 
-.map .f-col .link:hover {
+.nav-item-active {
+    font-size: 16px;
+    font-weight: 550;
+    padding: 10px 0;
     color: var(--highlightColor);
     border-bottom: 2px solid var(--highlightColor);
     transition: 0.4s ease-in-out;
 }
 
-.f-row.list .social-icon .link:hover {
-    color: var(--highlightColor);
-    transition: 0.4s ease-in-out;
+.nav-item {
+    font-size: 16px;
+    font-weight: 550;
+    padding: 10px 0;
+    border-bottom: 2px solid transparent;
+    transition: 0.5s ease-in-out;
 }
 
-.f-col span {
-    font-size: 12px;
+.nav-item:hover,
+.nav-item-active:hover {
+    cursor: pointer;
+}
+
+.f-row.list.socials {
+    justify-content: end;
 }
