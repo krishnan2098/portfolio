@@ -1,66 +1,79 @@
-import AnimateComponent from "../../AnimateComponent";
-import "./projects.css";
-const Projects = () => {
+import { ProjectsData } from './projectsData';
+import './projects.css';
+
+const Projects = (props) => {
+  let col_1 = [<div key={-1} className='p-offset-cell'></div>];
+  let col_2 = [(
+    <div key={0} className='p-cell' style={{ height: "40vh" }}>
+      <div className="p-details">
+        <div className='p-cell-title'>
+          <p style={{ margin: '1vh 0.5vw' }}>{ProjectsData[0].title}</p>
+        </div>
+        <div className='p-cell-id' style={{ height: '10vh' }}>
+          <p style={{ margin: '1vh 0.5vw' }}>1</p>
+        </div>
+      </div>
+      <div className='p-cell-img'>
+        <img src={ProjectsData[0].url} alt={ProjectsData[0].title} />
+      </div>
+    </div>
+  )];
+  let ele;
+  for (var i = 1; i < ProjectsData.length; i++) {
+    ele = (
+      <div key={i} className='p-cell'>
+        <div className="p-details">
+          <div className='p-cell-title'>
+            <p style={{ margin: '1vh 0.5vw' }}>{ProjectsData[i].title}</p>
+          </div>
+          <div className='p-cell-id'>
+            <p style={{ margin: '1vh 0.5vw' }}>{i + 1}</p>
+          </div>
+        </div>
+        <div className='p-cell-img'>
+          <img src={ProjectsData[i].url} alt={ProjectsData[i].title} />
+        </div>
+      </div>
+    )
+
+    if (i % 2 === 0) {
+      col_2.push(ele);
+    } else {
+      col_1.push(ele);
+    }
+  }
+
   return (
-    <AnimateComponent>
-      <div id="projects" className="projects">
-        <div className="p-wrapper">
-          <div className="p-grid">
-            <div className="p-left">
-              <div className="p-txt-item">
-                <span>Projects.</span>
-              </div>
+    <div id='projects' className='projects'>
+      <div className='p-wrapper'>
+        <div className='p-grid'>
+          <div className='p-left'>
+            <div className='p-txt-item'>
+              <span>Projects.</span>
             </div>
-            <div className="p-right">
-              <div className="p-row">
-                <div className="p-col">
-                  <span>1</span>
-                </div>
-                <div className="p-col img">
-                  <img
-                    src="https://hips.hearstapps.com/amv-prod-gp.s3.amazonaws.com/gearpatrol/wp-content/uploads/2019/12/Bose-Headphones-700-Gear-Patrol-Ambiance-3.jpg"
-                    alt="project-img"
-                  />
-                </div>
-              </div>
-              <div className="p-row">
-                <div className="p-col img">
-                  <img
-                    src="https://www.eatthis.com/wp-content/uploads/sites/4//media/images/ext/283020281/mcdonalds-menu-dessert-cone.jpg"
-                    alt="project-img"
-                  />
-                </div>
-                <div className="p-col">
-                  <span>2</span>
-                </div>
-              </div>
-              <div className="p-row">
-                <div className="p-col">
-                  <span>3</span>
-                </div>
-                <div className="p-col img">
-                  <img
-                    src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/larger/public/field/image/2021/11/windows-11-se-wallpaper-microsoft.jpg"
-                    alt="project-img"
-                  />
-                </div>
-              </div>
-              <div className="p-row">
-                <div className="p-col img">
-                  <img
-                    src="https://www.androidauthority.com/wp-content/uploads/2021/06/windows-11-wallpaper-4-1200x675.jpg"
-                    alt="project-img"
-                  />
-                </div>
-                <div className="p-col">
-                  <span>4</span>
+            <div className='i-title-wrapper'>
+              <div className='i-title'>
+                <h1 className='i-name'>
+                  “Creativity is nothing but a mind set free.”
+                </h1>
+                <div className='i-title-item'>
+                  – Torrie T. Asai
                 </div>
               </div>
             </div>
           </div>
+          <div className='p-center'>{/* right */}</div>
+          <div className='p-right'>
+            <div className="p-col-1">
+              {col_1}
+            </div>
+            <div className="p-col-2">
+              {col_2}
+            </div>
+          </div>
         </div>
       </div>
-    </AnimateComponent>
+    </div>
   );
 };
 

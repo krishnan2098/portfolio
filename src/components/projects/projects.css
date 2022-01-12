@@ -9,54 +9,81 @@
 }
 
 .p-left {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.p-center {
     flex: 1;
-    /* padding: 50px 0; */
 }
 
 .p-right {
-    flex: 1;
     overflow-y: scroll;
-    /* overflow-x: hidden; */
     height: 80vh;
+    flex: 3;
+    display: flex;
+    border-left: 1px solid var(--galleryBorderColor);
+    border-right: 1px solid var(--galleryBorderColor);
 }
 
-.p-row {
+.p-col-1,
+.p-col-2 {
+    width: 50%;
+    flex: 1;
+}
+
+.p-offset-cell {
+    height: 10vh;
+    border-right: 1px solid var(--galleryBorderColor);
+}
+
+.p-cell {
+    height: 60vh;
+}
+
+.p-details {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    height: 40vh;
 }
 
-.p-col {
-    flex: 1;
-    border: 1px solid var(--galleryBorderColor);
-    height: 100%;
+.p-cell-title {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-end;
+    /* padding: 1vh 0; */
+    flex: 3;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+.p-cell-id {
+    display: flex;
     justify-content: flex-end;
-}
-
-.p-col.img {
-    /* background: #202020; */
-    opacity: 0.9;
-    overflow: hidden;
-}
-
-.p-col span {
-    margin: 0 15px 15px 0;
+    align-items: flex-end;
+    flex: 1;
+    height: 30vh;
+    color: black;
     font-size: 60px;
     font-weight: 750;
     color: var(--galleryImgNumColor);
 }
 
-.p-col img {
+.p-cell-img {
+    height: 30vh;
+    background-color: grey;
+    overflow: hidden;
+}
+
+.p-cell-img img {
     height: 100%;
     background-size: auto;
     object-fit: cover;
 }
 
-.p-right::-webkit-scrollbar {
+/* scrollbar styles */
+/* .p-right::-webkit-scrollbar {
     width: 0.5vw;
 }
 
@@ -75,6 +102,24 @@
     background: var(--galleryBorderColor);;
     border-left: 2px solid var(--scrollBorderColor);
     border-right: 2px solid var(--scrollBorderColor);
+} */
+
+.p-name {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+.p-title-wrapper {
+    display: flex;
+}
+
+.p-title-item {
+    font-size: 30px;
+    margin: 30px 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
 .p-txt-item {
