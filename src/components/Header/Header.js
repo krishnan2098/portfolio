@@ -25,19 +25,5 @@ export default function Header() {
         </Toolbar>
       </AppBar>
     </Box>
-    // <div className="navbar">
-    //   <div className="navbar-wrapper">
-    //     <div className="menu">
-    //       <div className="logo">
-    //         <img src={Logo} alt="" />
-    //       </div>
-    //       <div className="dark-mode-icon">
-    //         <div className="dark-mode-button">
-    //           {icon}
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
