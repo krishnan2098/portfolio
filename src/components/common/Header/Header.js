@@ -2,8 +2,7 @@ import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Link from "@mui/material/Link";
-import "./header.css";
-import Logo from "../common/Logo";
+import Logo from "../Logo";
 import ThemeToggleButton from "./ThemeToggleButton";
 import Box from "@mui/material/Box";
 
