@@ -1,4 +1,4 @@
-import Header from './components/header/header';
+// import Header from './components/header/header';
 import Home from './components/home/home';
 import Projects from './components/projects/projects';
 import Blog from './components/blog/blog';
@@ -9,7 +9,7 @@ import { ThemeProvider } from 'styled-components';
 import { AnimatePresence, motion } from 'framer-motion';
 import { wrap } from 'popmotion';
 import './App.css';
-
+import Layout from "./components/common/Layout";
 // Reference: https://codesandbox.io/s/framer-motion-image-gallery-pqvx3?from-embed=&file=/src/Example.tsx:197-520
 // Reference: https://www.framer.com/docs/examples/#exit-animations
 
@@ -150,40 +150,44 @@ const App = () => {
 
   const [theme, setTheme] = useState('dark');
   return (
-    <ThemeProvider theme={themes[theme]}>
-      <div className='app'>
-        <div className='app-wrapper'>
-          <Header
-            theme={theme}
-            themes={themes}
-            updateTheme={updateTheme}
-            setTheme={setTheme}
-          />
+    <>
+    {/* <Home /> */}
+    <Layout />
+    </>
+    // <ThemeProvider theme={themes[theme]}>
+    //   <div className='app'>
+    //     <div className='app-wrapper'>
+    //       <Header
+    //         theme={theme}
+    //         themes={themes}
+    //         updateTheme={updateTheme}
+    //         setTheme={setTheme}
+    //       />
 
-          <AnimatePresence initial={false} custom={direction} exitBeforeEnter>
-            <motion.div
-              className='app-section'
-              key={page}
-              custom={direction}
-              variants={variants}
-              initial='enter'
-              animate='center'
-              exit='exit'
-              transition={{
-                x: { type: "spring", stiffness: 300, damping: 30 },
-                opacity: { duration: 0.2 }
-              }}
-            >
-              {PageIndex === 0 ? <Home /> : null}
-              {PageIndex === 1 ? <Projects /> : null}
-              {PageIndex === 2 ? <Blog /> : null}
-              {PageIndex === 3 ? <Contact /> : null}
-            </motion.div>
-          </AnimatePresence>
-          <Footer setPage={paginate} pages={pages} currentPageIndex={pages.indexOf(page)} />
-        </div>
-      </div>
-    </ThemeProvider>
+    //       <AnimatePresence initial={false} custom={direction} exitBeforeEnter>
+    //         <motion.div
+    //           className='app-section'
+    //           key={page}
+    //           custom={direction}
+    //           variants={variants}
+    //           initial='enter'
+    //           animate='center'
+    //           exit='exit'
+    //           transition={{
+    //             x: { type: "spring", stiffness: 300, damping: 30 },
+    //             opacity: { duration: 0.2 }
+    //           }}
+    //         >
+    //           {PageIndex === 0 ? <Home /> : null}
+    //           {PageIndex === 1 ? <Projects /> : null}
+    //           {PageIndex === 2 ? <Blog /> : null}
+    //           {PageIndex === 3 ? <Contact /> : null}
+    //         </motion.div>
+    //       </AnimatePresence>
+    //       <Footer setPage={paginate} pages={pages} currentPageIndex={pages.indexOf(page)} />
+    //     </div>
+    //   </div>
+    // </ThemeProvider>
   );
 };
 
