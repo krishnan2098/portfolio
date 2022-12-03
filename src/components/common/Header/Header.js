@@ -9,7 +9,7 @@ import Box from "@mui/material/Box";
 
 export default function Header() {
   return (
-      <AppBar elevation={0}  position="static">
+      <AppBar elevation={0}>
         <Toolbar>
           <Link href="/">
             <Logo />
