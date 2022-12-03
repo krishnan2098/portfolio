@@ -9,12 +9,7 @@ import Box from "@mui/material/Box";
 
 export default function Header() {
   return (
-    <Box
-      sx={{
-        display: "inline-flex",
-        alignItems: "center",
-      }}>
-      <AppBar>
+      <AppBar elevation={0}  position="static">
         <Toolbar>
           <Link href="/">
             <Logo />
@@ -23,6 +18,5 @@ export default function Header() {
           <ThemeToggleButton/>
         </Toolbar>
       </AppBar>
-    </Box>
   );
 };
