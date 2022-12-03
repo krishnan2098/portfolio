@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Header from "./common/Header/Header";
 import Home from "./Home/Home";
 import Container from "@mui/material/Container"
+import BottomNavigationBar from "./common/BottomNavigationBar/BottomNavigationBar";
 
 
 export default function Page(child) {
@@ -14,6 +15,7 @@ export default function Page(child) {
                     <Home/>
                 </Box>
             </Container>
+            <BottomNavigationBar/>
         </div>        
     );
 }
