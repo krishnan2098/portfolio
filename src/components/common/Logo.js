@@ -1,6 +1,6 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import { LOGO_IMG_PATH } from "./utils";
+import { LOGO_IMG_PATH } from "../../utils";
 
 export default function Logo() {
     return (
